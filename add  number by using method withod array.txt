@@ -1,0 +1,39 @@
+using System;
+
+namespace assingment
+{
+    class cal
+    {
+        
+        public int add()
+        {
+            
+            int sum = 0;
+            Console.WriteLine("how many term store data in array");
+            int b = int.Parse(Console.ReadLine());
+            int[] arr = new int[b];
+            for (int i=0;i<b;i++)
+            {
+                arr[i]= int.Parse(Console.ReadLine());
+            }
+            for (int i = 0; i < b; i++)
+            {
+                sum = sum + arr[i];
+            }
+            return sum;
+
+        }
+    }
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            cal obj = new cal();
+           int res= obj.add();
+            Console.WriteLine("Sum of array is = {0}",res);
+            Console.ReadKey();
+
+        }
+    }
+}

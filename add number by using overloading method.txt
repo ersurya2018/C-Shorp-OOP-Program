@@ -1,0 +1,35 @@
+using System;
+
+namespace assingment
+{
+    class cal
+    {
+        public int add(int a,int b)
+        {
+            int sum = a + b;
+            return sum;
+        }
+        public int add(int a, int b,int c)
+        {
+            int sum = a + b + c;
+            return sum;
+        }
+        public int add(int a, int b, int c,int d)
+        {
+            int sum = a + b + c+d;
+            return sum;
+        }
+    }
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            cal obj = new cal();
+            int res = obj.add(1,2,3,4);
+            Console.WriteLine("Sum of number is {0}",res);
+            Console.ReadKey();
+
+        }
+    }
+}

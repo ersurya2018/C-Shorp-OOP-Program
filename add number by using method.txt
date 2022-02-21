@@ -1,0 +1,30 @@
+using System;
+namespace assingment
+{
+    class cal
+    {
+        public int a;
+        public int b;
+        public int add()
+        {
+            Console.WriteLine("Enter the first number");
+            this.a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the second number number");
+            this.b = int.Parse(Console.ReadLine());
+            int c = this.a + this.b;
+            return c;
+        }
+    }
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            cal obj = new cal();
+            int res=obj.add();
+            Console.WriteLine(res);
+            Console.ReadKey();
+
+        }
+    }
+}

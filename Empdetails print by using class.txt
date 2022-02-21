@@ -1,0 +1,38 @@
+using System;
+
+namespace assingment
+{
+   class Empolyee
+    {
+        public int salary;
+        public int id;
+        public string name;
+
+        public void Empdetails(int sal,int id,string name)
+        {
+            this.salary = sal;
+            this.id = id;
+            this.name = name;
+            Console.WriteLine("Employee name : {0}, id : {1}, salary : {2}",this.name,this.id,this.salary);
+        }
+    }
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Empolyee obj = new Empolyee();
+            Console.WriteLine("Enter Employee name");
+            string name = Console.ReadLine();
+            Console.WriteLine("Enter Employee id");
+            int id = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Employee salary");
+            int sal = int.Parse(Console.ReadLine());
+            obj.Empdetails(sal,id,name);
+
+
+            Console.ReadKey();
+
+        }
+    }
+}

@@ -1,0 +1,57 @@
+using System;
+
+namespace taskprogram
+{
+    class A
+    {
+        public int a;
+        public int b;
+        public void add(int a,int b)
+        {
+            this.a = a;
+            this.b = b;
+            Console.WriteLine("Sum of two number {0}",(this.a + this.b));
+        }
+    }
+    class B:A
+    {
+        public void mul(int a, int b)
+        {
+            this.a = a;
+            this.b = b;
+            Console.WriteLine("Multiply is {0}",(this.a * this.b));
+        }
+
+    }
+    class C : B
+    {
+        public void Divi(int a, int b)
+        {
+            this.a = a;
+            this.b = b;
+            try { Console.WriteLine("Division is {0}", (this.a / this.b)); 
+            }
+            catch(Exception e) {
+                Console.WriteLine("number is not divide by zero");
+            }
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter first number");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            int b = int.Parse(Console.ReadLine());
+            C obj = new C();
+            obj.add(a,b);
+            obj.mul(a,b);
+            obj.Divi(a,b);
+            //Console.WriteLine("Hello World!");
+
+            Console.ReadKey();
+        }
+    }
+}

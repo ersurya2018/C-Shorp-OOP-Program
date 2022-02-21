@@ -1,0 +1,41 @@
+using System;
+
+namespace taskprogram
+{
+    class Studata
+    {
+        private int rollno;
+        private string name;
+        private string subject;
+
+        public void insert(int rollno, string name, string subject)
+        {
+            this.name = name;
+            this.rollno = rollno;
+            this.subject = subject;
+        }
+        public void display()
+        {
+            Console.WriteLine("Student RollNo {0} Name {1} and Subject {2}.", this.rollno, this.name, this.subject);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+                Console.WriteLine("Enter Rollno");
+                int rollno = int.Parse(Console.ReadLine());
+                Console.WriteLine("Enter your name");
+                string name = Console.ReadLine();
+                Console.WriteLine("Enter your subject");
+                string sub = Console.ReadLine();
+
+                Studata obj = new Studata();
+                obj.insert(rollno,name,sub);
+                obj.display();
+            //Console.WriteLine("Hello World!");
+
+            Console.ReadKey();
+        }
+    }
+}

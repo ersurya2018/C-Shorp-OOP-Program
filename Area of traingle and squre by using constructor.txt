@@ -1,0 +1,25 @@
+using System;
+
+namespace taskprogram
+{
+    class Program
+    {
+        public Program(int a)
+        {
+            int res = a * a;
+            Console.WriteLine("Area of squre is {0}", res);
+        }
+        public Program(int a,int b)
+        {
+            int res = a * b;
+            Console.WriteLine("Area of traingle is {0}",res);
+        }
+        static void Main(string[] args)
+        {
+            Program obj = new Program(4,5);
+            //Console.WriteLine("Hello World!");
+
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Demo : abc, def
+    {
+        public static void Main()
+        {
+            System.Console.WriteLine("Hello Interfaces");
+            abc refabc = new Demo();
+            refabc.xyz();
+            Console.ReadLine();
+        }
+
+        public void xyz()
+        {
+            System.Console.WriteLine("In xyz");
+        }
+
+        public void pqr()
+        {
+            System.Console.WriteLine("In xyz");
+        }
+    }
+
+    interface abc
+    {
+        void xyz();
+    }
+
+    interface def
+    {
+        void pqr();
+    }
+}

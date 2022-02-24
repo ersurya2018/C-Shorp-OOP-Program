@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class coder : emp
+    {
+        public void savedata()
+        {
+            Console.WriteLine("this is save data");
+        }
+        public void showdata()
+        {
+            Console.WriteLine("sghow data");
+        }
+    }
+    interface emp
+    {
+        void savedata();
+        void showdata();
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            emp obj = new coder();
+            obj.savedata();
+            obj.showdata();
+
+            Console.ReadKey();
+        }
+    }
+}

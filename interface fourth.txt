@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    interface abc
+    {
+        void xyz();
+    }
+
+    class Sample : abc
+    {
+        public void xyz()
+        {
+            System.Console.WriteLine("In Sample :: xyz");
+        }
+    }
+    class Demo : abc
+    {
+        public void xyz()
+        {
+            System.Console.WriteLine("In Demo :: xyz");
+        }
+        public static void Main()
+        {
+            System.Console.WriteLine("Hello Interfaces");
+            Demo refDemo = new Demo();
+            refDemo.xyz();
+            abc refSample = new Sample();
+            refSample.xyz();
+            Console.ReadKey();
+        }
+
+        
+    } 
+}

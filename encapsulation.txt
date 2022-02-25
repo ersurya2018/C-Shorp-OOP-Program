@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class myclass
+    {
+        private int id;
+        private int age;
+        public int Id
+        {
+            set
+            {
+                id = value;
+            }
+            get
+            {
+                return id;
+            }
+        }
+        public int Age
+        {
+            set
+            {
+                age = value;
+            }
+            get
+            {
+                return age;
+            }
+        }
+        class Program
+        {
+            static void Main(string[] args)
+            { 
+
+                myclass obj = new myclass();
+                int o = obj.Id = 45;
+                Console.WriteLine("your id is ="  + o);
+                myclass obj1 = new myclass();
+                int p = obj1.Age = 4545;
+                Console.WriteLine(" your age is =" + p);
+                Console.ReadKey();
+
+
+
+
+
+            }
+        }
+    }
+}

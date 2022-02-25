@@ -1,0 +1,92 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class myclass
+    {
+        private int id;
+        private int rollno;
+        private string name;
+        public int Id
+        {
+            set
+            {
+                if (value >= 100 && value <= 1000)
+                    id = value;
+                else
+                {
+                    Console.WriteLine(" wrong id please enter the valide id number !");
+                }
+            }
+            get
+            {
+                return id;
+            }
+        }
+        public int Rol
+        {
+            set
+            {
+                if (value >= 1 && value <= 100)
+                    rollno = value;
+                else
+                {
+                    Console.WriteLine("sorry sir please valide rollno !");
+                }
+            }
+            get
+            {
+                return rollno;
+            }
+        }
+        public string Name
+        {
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    Console.WriteLine("please enter you name!");
+                else
+                {
+                    name = value;
+                    
+                }
+            }
+            get
+            {
+                return name;  
+            }
+
+        }  
+           
+        }
+        class Program
+        {
+            static void Main(string[] args)
+            {
+            Console.WriteLine("enter your id under 100 to 1000=");
+            Console.WriteLine("enter your id =");
+            int i = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter your roll under 1 to 100  =");
+            Console.WriteLine("enter your roll no =");  
+            int r = int.Parse(Console.ReadLine());
+            Console.WriteLine(" welcome sir pleace entr your name  =");
+            Console.WriteLine("enter your name  =");
+           string n = (Console.ReadLine());
+            myclass obj = new myclass();
+            obj.Id = i;
+            obj.Rol = r;
+            obj.Name = n;
+
+            Console.WriteLine("id= {0} roll= {1} name= {2}", obj.Id, obj.Rol, obj.Name);
+            Console.ReadLine();
+
+
+
+            }
+        }
+    }
+

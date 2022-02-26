@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Rectangle
+    {
+        //member variables
+        private double length;
+        private double width;
+
+        // here the Accept the value of x and y
+        public void Acceptdetails()
+        {
+            Console.WriteLine("Enter Length: ");
+            length = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter Width: ");
+            width = Convert.ToDouble(Console.ReadLine());
+        }
+        //Here the find the area of rectangle
+        public double GetArea()
+        {
+            return length * width;
+        }
+        // after the find of area and display the area
+        public void Display()
+        {
+            Console.WriteLine("Length: {0}", length);
+            Console.WriteLine("Width: {0}", width);
+            Console.WriteLine("Area: {0}", GetArea());
+        }
+    }//end class Rectangle
+
+    class ExecuteRectangle
+    {
+        //here is Main method 
+        static void Main(string[] args)
+        {
+            //Object creation of Rectangle class
+            Rectangle r = new Rectangle();
+            //Here the calling methods
+            r.Acceptdetails();
+            r.Display();
+            Console.ReadLine();
+        }
+    }
+}

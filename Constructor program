@@ -1,0 +1,175 @@
+Constructors: A constructor is a special method of the class which gets automatically invoked whenever an instance of the class is created. Like methods, a constructor also contains the collection of instructions that are executed at the time of Object creation. It is used to assign initial values to the data members of the same class.
+
+1) Constructor of a class must have the same name as the class name in which it resides.
+2) A constructor can not be abstract, final, and Synchronized.
+3) Within a class, you can create only one static constructor.
+4) A constructor doesn’t have any return type, not even void.
+5) A static constructor cannot be a parameterized constructor.
+6) A class can have any number of constructors.
+7) Access modifiers can be used in constructor declaration to control its access i.e which other class can call the constructor. 
+
+
+			Types of Constructor
+1.Default Constructor
+2.Parameterized Constructor
+3.Copy Constructor
+4.Private Constructor
+5.Static Constructor
+//Default Construct
+=====================
+using System;
+
+namespace constructor
+{
+    class Program
+    {
+        int a;
+        int b;
+        public Program()
+        {
+            Console.WriteLine("Default constructor");
+        }
+        static void Main(string[] args)
+        {
+            Program obj = new Program();
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+==================================
+Parameterized Constructor
+=======================================
+using System;
+
+namespace constructor
+{
+    class Program
+    {
+        int a;
+        int b;
+        public Program(int a,int b)
+        {
+            this.a = a;
+            this.b = b;
+            int c = a + b;
+            Console.WriteLine("Parameterized Constructor");
+            Console.WriteLine(c);
+        }
+        static void Main(string[] args)
+        {
+            Program obj = new Program(12,23);
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+==============================================
+Copy Constructor
+==============================================
+
+
+
+
+using System;
+
+namespace constructor
+{
+//this is class name
+    class Program
+    {
+        string name, vill;
+		//this is parameterized constructor
+		
+        public Program(string a,string b)
+        {
+            this.name = a;
+            this.vill = b;
+        }
+		//here we use copy constructor
+		
+        Program(Program pro)
+        {
+            name = pro.name;
+            vill = pro.vill;
+        }
+		
+        /*
+        public string hii
+        {
+            get
+            {
+                return name + vill;
+            }
+        }*/
+        public string hii()
+        {
+            return ("name :"+name+", village :"+vill);
+        }
+        
+		//this is main function
+        static void Main(string[] args)
+        {
+            Program obj1 = new Program("coder", "noida");
+
+            Program obj2 = new Program(obj1);
+            //Console.WriteLine(obj2.hii);
+            Console.WriteLine(obj2.hii());
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+
+
+===================================================
+Private Constructor
+===================================================
+using System;
+
+namespace constructor
+{
+    class Program
+    {
+        private Program()
+        {
+            //Console.WriteLine("hii");
+        }
+        public static int a;
+        public static int add1()
+        {
+            
+            return ++a;
+        }
+        
+        static void Main(string[] args)
+        {
+            Program obj = new Program();
+            Program.a = 100;
+            Program.add1();
+            Console.WriteLine(Program.a);
+            Console.WriteLine(Program.add1());
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(Program.add1());
+            }
+        }
+    }
+}
+================================================
+Static Constructor
+================================================
+using System;
+
+namespace constructor
+{
+    class Program
+    {
+        //this is stqatic constructor
+       static Program()
+        {
+            Console.WriteLine("hii this is static constructor");
+        }
+        static void Main(string[] args)
+        {
+            Program obj = new Program();    
+        }
+    }
+}
